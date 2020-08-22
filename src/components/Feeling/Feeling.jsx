@@ -14,7 +14,7 @@ class Feeling extends Component {
 
     handleFeelingNext = () => {
         console.log(this.state);
-        console.log('testing');
+        this.props.dispatch({ type: 'SET_FEELING', payload: this.state.feeling})
     }
 
     render() {
