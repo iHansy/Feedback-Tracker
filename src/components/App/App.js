@@ -15,12 +15,17 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Feedback!</h1>
-            <h4><i>Don't forget it!</i></h4>
           </header>
           <br />
 
-          {/* Declaring route urls -> components */}
+          {/* Declaring route urls w/ components */}
           <Route exact path="/" component={Home} />
+          <Route exact path="/feeling" component={Feeling} />
+          <Route exact path="/understanding" component={Understanding} />
+          <Route exact path="/supported" component={Supported} />
+          <Route exact path="/comments" component={Comments} />
+          <Route exact path="/review" component={Review} />
+          <Route exact path="/confirmation" component={Confirmation} />
 
         </div>
       </Router>

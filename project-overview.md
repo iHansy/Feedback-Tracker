@@ -8,6 +8,12 @@
     {} Understanding content?
     {} Being supported?
     {} Any comments?
+    {} Review/submit
+        - save submission in database
+    {} confirmation
+        - text saying thanks for submitting your feedback
+        - button going home
+        - button to leave another feedback
 
 {} Create Components where deemed valuable
 {} Create alerts if input fields are empty (not including comments)
@@ -18,6 +24,9 @@
 {} Create project name/description in README
     - Include picture
     - Include instructions to start up, install node and npm install all dependencies
+{} Add favicon
+
 
 
     - Stretch Task List - 
+{} Put all route declarations in its own component
