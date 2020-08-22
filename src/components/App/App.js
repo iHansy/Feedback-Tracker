@@ -8,6 +8,7 @@ import Home from '../Home/Home.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
+import Comments from '../Comments/Comments.jsx';
 
 class App extends Component {
 
@@ -28,8 +29,8 @@ class App extends Component {
           <Route exact path="/feeling" component={Feeling} />
           <Route exact path="/understanding" component={Understanding} />
           <Route exact path="/supported" component={Supported} />
-          {/* <Route exact path="/comments" component={Comments} />
-          <Route exact path="/review" component={Review} />
+          <Route exact path="/comments" component={Comments} />
+          {/* <Route exact path="/review" component={Review} />
           <Route exact path="/confirmation" component={Confirmation} /> */}
 
         </div>

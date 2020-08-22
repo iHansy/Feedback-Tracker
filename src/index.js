@@ -8,6 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 //reducers below this
+//I could have combined most of these reducers into 1 bigger reducer, but I feel like this is good practice
 const feelingReducer = (state = {}, action) => {
     if (action.type === 'SET_FEELING') { 
         return action.payload //this creates a new state
@@ -22,11 +23,19 @@ const understandingReducer = (state = {}, action) => {
     return state
 }
 
+const supportedReducer = (state = {}, action) => {
+    if (action.type ==='SET_SUPPORTED') {
+        return action.payload
+    }
+    return state
+}
+
 //always need a store!
 const store = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
+        supportedReducer,
     }),
     applyMiddleware(logger)
 )
