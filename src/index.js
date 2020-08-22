@@ -9,6 +9,9 @@ import { Provider } from 'react-redux';
 
 //reducers below this
 const feelingReducer = (state = {}, action) => {
+    if (action.type === 'SET_FEELING') { 
+        return action.payload //this creates a new state
+    }
     return state;
 }
 
