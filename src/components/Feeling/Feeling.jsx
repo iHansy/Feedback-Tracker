@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Feeling extends Component {
+
     state = { //initial state setup
         feeling: ''
     }
@@ -16,7 +17,7 @@ class Feeling extends Component {
     //next button function
     feelingNextBtn = () => {
         console.log(this.state);
-        this.props.dispatch({ type: 'SET_FEELING', payload: this.state.feeling}) //dispatching to redux reducer
+        this.props.dispatch({ type: 'SET_FEELING', payload: this.state.feeling }) //dispatching to redux reducer
         this.props.history.push('/understanding') //navigating to understanding page
     }
 
@@ -27,7 +28,7 @@ class Feeling extends Component {
                 <p>1 = really struggling </p>
                 <p>5 = feeling amazing</p>
                 {/* <form></form> */}
-                <input type="number" required placeholder="enter number" onChange={this.feelingInput}/>
+                <input type="number" required placeholder="enter number" onChange={this.feelingInput} />
                 <button onClick={this.feelingNextBtn}>Next</button>
             </div>
         )

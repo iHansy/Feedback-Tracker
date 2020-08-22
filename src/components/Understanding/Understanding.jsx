@@ -16,7 +16,8 @@ class Understanding extends Component {
     //sending dispatch and pushing to url history
     understandingNextBtn = () => {
         console.log(this.state);
-        this.props.dispatch({type:'SET_UNDERSTANDING', payload: this.state.understanding})
+        this.props.dispatch({ type: 'SET_UNDERSTANDING', payload: this.state.understanding })
+        this.props.history.push('/supported')
     }
 
     render() {
