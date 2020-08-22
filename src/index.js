@@ -15,10 +15,15 @@ const feelingReducer = (state = {}, action) => {
     return state;
 }
 
+const understandingReducer = (state = {}, action) => {
+    return state
+}
+
 //always need a store!
 const store = createStore(
     combineReducers({
         feelingReducer,
+        understandingReducer,
     }),
     applyMiddleware(logger)
 )
