@@ -24,8 +24,8 @@ class Feeling extends Component {
         return (
             <div>
                 <h2>How are you feeling today?</h2>
-                <p>1 = I'm struggling </p>
-                <p>5 = Feeling amazing</p>
+                <p>1 = really struggling </p>
+                <p>5 = feeling amazing</p>
                 {/* <form></form> */}
                 <input type="number" required placeholder="enter number" onChange={this.feelingInput}/>
                 <button onClick={this.feelingNextBtn}>Next</button>
