@@ -1,9 +1,9 @@
     - Base Task List -
-{} Install all libraries / extensions
+{X} Install all libraries / extensions
 
 {} Create reducers for each input
 {} Create base views
-    {} Home page
+    {X} Home page
         {} Add margins
         {} Increase button
     {} How are you feeling?
@@ -27,8 +27,11 @@
     - Include picture
     - Include instructions to start up, install node and npm install all dependencies
 {} Add favicon
+{} Add footer?
+{} Make sure font and font sizes are consistent
 
 
 
     - Stretch Task List - 
 {} Put all route declarations in its own component
+{} Change inputs to radio

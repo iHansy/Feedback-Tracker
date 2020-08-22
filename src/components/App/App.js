@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-// importing components
+// importing feedback components
 import Home from '../Home/Home.jsx';
-
-
+import Feeling from '../Feeling/Feeling.jsx';
 
 class App extends Component {
+
+
+
+  
   render() {
     return (
       <Router>
@@ -20,8 +23,8 @@ class App extends Component {
 
           {/* Declaring route urls w/ components */}
           <Route exact path="/" component={Home} />
-          {/* <Route exact path="/feeling" component={Feeling} />
-          <Route exact path="/understanding" component={Understanding} />
+          <Route exact path="/feeling" component={Feeling} />
+          {/* <Route exact path="/understanding" component={Understanding} />
           <Route exact path="/supported" component={Supported} />
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
