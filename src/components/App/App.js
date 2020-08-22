@@ -14,18 +14,18 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <h1 className="App-title">Feedback!</h1>
+            <h1 className="App-title">Submit your daily feedback!</h1>
           </header>
           <br />
 
           {/* Declaring route urls w/ components */}
           <Route exact path="/" component={Home} />
-          <Route exact path="/feeling" component={Feeling} />
+          {/* <Route exact path="/feeling" component={Feeling} />
           <Route exact path="/understanding" component={Understanding} />
           <Route exact path="/supported" component={Supported} />
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
-          <Route exact path="/confirmation" component={Confirmation} />
+          <Route exact path="/confirmation" component={Confirmation} /> */}
 
         </div>
       </Router>
