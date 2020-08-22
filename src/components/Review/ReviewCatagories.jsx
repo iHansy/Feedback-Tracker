@@ -5,7 +5,7 @@ class ReviewCatagories extends Component {
 
     render() {
         return (
-                <table>
+                <table className="tableCenter">
                     <thead>
                         <tr>
                             <th>Category</th>
@@ -14,8 +14,20 @@ class ReviewCatagories extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>How you're feeling</td>
-                            <td>{this.props.reduxStore.feelingReducer}</td>
+                            <td>Feeling</td>
+                            <td>{this.props.feeling}</td>
+                        </tr>
+                        <tr>
+                            <td>Understanding</td>
+                            <td>{this.props.understanding}</td>
+                        </tr>
+                        <tr>
+                            <td>Supported</td>
+                            <td>{this.props.supported}</td>
+                        </tr>
+                        <tr>
+                            <td>Comments</td>
+                            <td>{this.props.comments}</td>
                         </tr>
                     </tbody>
                 </table>

@@ -18,3 +18,8 @@
   font-size: large;
 }
 
+.tableCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
