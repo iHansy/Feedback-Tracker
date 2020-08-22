@@ -2,9 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Review extends Component {
+
+    componentDidMount() {
+        //would have probably been more efficient to keep all reducers in 1 bigger one
+        //but this is good repetitive practice!
+        console.log(this.props.reduxStore)
+    }
+
     render() {
         return (
-            <h1> Time to review baby!</h1>
+            <div>
+                <h2>Review your feedback</h2>
+            </div>
         )
     }
 }
