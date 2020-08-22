@@ -35,10 +35,10 @@ class Feeling extends Component {
     }
 }
 
-//not using state props here
-const mapStateToProps = (reduxState) => {
+//not using store props here
+const mapStateToProps = (reduxStore) => {
     return {
-        reduxState
+        reduxStore
     }
 }
 

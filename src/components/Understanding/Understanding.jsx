@@ -33,10 +33,10 @@ class Understanding extends Component {
     }
 }
 
-//not using state props here
-const mapStateToProps = (ReduxState) => {
+//not using store props here
+const mapStateToProps = (reduxStore) => {
     return {
-        ReduxState
+        reduxStore
     }
 }
 

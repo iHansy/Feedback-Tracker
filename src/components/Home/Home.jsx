@@ -25,9 +25,9 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = (reduxState) => {
+const mapStateToProps = (reduxStore) => {
     return {
-        reduxState
+        reduxStore
     }
 }
 

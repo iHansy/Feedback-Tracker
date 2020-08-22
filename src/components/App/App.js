@@ -7,6 +7,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Home from '../Home/Home.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
+import Supported from '../Supported/Supported.jsx';
 
 class App extends Component {
 
@@ -26,8 +27,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/feeling" component={Feeling} />
           <Route exact path="/understanding" component={Understanding} />
-          {/* <Route exact path="/supported" component={Supported} />
-          <Route exact path="/comments" component={Comments} />
+          <Route exact path="/supported" component={Supported} />
+          {/* <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
           <Route exact path="/confirmation" component={Confirmation} /> */}
 
