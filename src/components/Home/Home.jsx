@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Home extends Component {
+
     render() {
         return (
-            <h1> Home Page!</h1>
+            <div>
+                <h2> Take a few deep breathes before you begin.</h2>
+                <p>Once you're ready, please hit the "Start Feedback" button.</p>
+                <button>Start Feedback</button>
+            </div>
         )
     }
 }

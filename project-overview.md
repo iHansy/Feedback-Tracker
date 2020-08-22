@@ -4,6 +4,8 @@
 {} Create reducers for each input
 {} Create base views
     {} Home page
+        {} Add margins
+        {} Increase button
     {} How are you feeling?
     {} Understanding content?
     {} Being supported?
