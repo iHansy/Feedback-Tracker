@@ -38,3 +38,4 @@
 {} Change inputs to radio
 {} Alerts if numbers aren't in range
 {} Change input/buttons to a form
+{} Use fancier alerts

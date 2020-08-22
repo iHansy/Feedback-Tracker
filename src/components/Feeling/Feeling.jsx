@@ -17,6 +17,11 @@ class Feeling extends Component {
     //next button function
     feelingNextBtn = () => {
         console.log(this.state);
+        const feelingScore = this.state.feeling
+        if (feelingScore === '' || feelingScore < 1 || feelingScore > 5) {
+            alert('Please fill in a number 1-5.')
+            return
+        }
         this.props.dispatch({ type: 'SET_FEELING', payload: this.state.feeling }) //dispatching to redux reducer
         this.props.history.push('/understanding') //navigating to understanding page
     }

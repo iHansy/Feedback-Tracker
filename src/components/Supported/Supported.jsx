@@ -15,6 +15,11 @@ class Supported extends Component {
 
     supportedNextBtn = () => {
         console.log(this.state);
+        const supportedScore = this.state.supported
+        if (supportedScore === '' || supportedScore < 1 || supportedScore > 5) {
+            alert('Please fill in a number 1-5.')
+            return
+        }
         this.props.dispatch({ type: 'SET_SUPPORTED', payload: this.state.supported}) //dispatch to redux
         this.props.history.push('/comments') //adding url
     }

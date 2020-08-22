@@ -16,6 +16,11 @@ class Understanding extends Component {
     //sending dispatch and pushing to url history
     understandingNextBtn = () => {
         console.log(this.state);
+        const understandingScore = this.state.understanding
+        if (understandingScore === '' || understandingScore < 1 || understandingScore > 5) {
+            alert('Please fill in a number 1-5.')
+            return
+        }
         this.props.dispatch({ type: 'SET_UNDERSTANDING', payload: this.state.understanding })
         this.props.history.push('/supported')
     }
