@@ -34,6 +34,7 @@ class Feeling extends Component {
     }
 }
 
+//not using state props here
 const mapStateToProps = (reduxState) => {
     return {
         reduxState

@@ -6,12 +6,13 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 // importing feedback components
 import Home from '../Home/Home.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
+import Understanding from '../Understanding/Understanding.jsx';
 
 class App extends Component {
 
 
 
-  
+
   render() {
     return (
       <Router>
@@ -24,8 +25,8 @@ class App extends Component {
           {/* Declaring route urls w/ components */}
           <Route exact path="/" component={Home} />
           <Route exact path="/feeling" component={Feeling} />
-          {/* <Route exact path="/understanding" component={Understanding} />
-          <Route exact path="/supported" component={Supported} />
+          <Route exact path="/understanding" component={Understanding} />
+          {/* <Route exact path="/supported" component={Supported} />
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
           <Route exact path="/confirmation" component={Confirmation} /> */}
