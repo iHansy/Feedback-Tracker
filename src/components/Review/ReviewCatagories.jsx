@@ -5,7 +5,7 @@ class ReviewCatagories extends Component {
 
     render() {
         return (
-                <table className="tableCenter">
+                <table className="tableStyle">
                     <thead>
                         <tr>
                             <th>Category</th>
