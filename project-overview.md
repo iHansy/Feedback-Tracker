@@ -29,9 +29,11 @@
 {} Add favicon
 {} Add footer?
 {} Make sure font and font sizes are consistent
+{} Change buttons
 
 
 
     - Stretch Task List - 
 {} Put all route declarations in its own component
 {} Change inputs to radio
+{} Alerts if numbers aren't in range

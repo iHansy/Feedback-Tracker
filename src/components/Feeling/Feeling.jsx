@@ -12,6 +12,11 @@ class Feeling extends Component {
         })
     }
 
+    handleFeelingNext = () => {
+        console.log(this.state);
+        console.log('testing');
+    }
+
     render() {
         return (
             <div>
@@ -20,9 +25,9 @@ class Feeling extends Component {
                 <p>5 = Feeling amazing</p>
                 {/* <form></form> */}
                 <input type="number" required placeholder="enter number"
-                    onChange={() => this.handleInput}
+                    onChange={this.handleInput}
                 />
-                <button onChange={}>Next</button>
+                <button onClick={this.handleFeelingNext}>Next</button>
             </div>
         )
     }
