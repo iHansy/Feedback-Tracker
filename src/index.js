@@ -30,12 +30,20 @@ const supportedReducer = (state = {}, action) => {
     return state
 }
 
+const commentsReducer = (state = {}, action) => {
+    if (action.type === 'SET_COMMENTS') {
+        return action.payload
+    }
+    return state
+}
+
 //always need a store!
 const store = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
         supportedReducer,
+        commentsReducer,
     }),
     applyMiddleware(logger)
 )
