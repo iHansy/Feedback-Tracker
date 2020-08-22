@@ -6,7 +6,9 @@ class Comments extends Component {
         return (
             <div>
                 <h2>Any comments you would like to add?</h2>
-                <i>optional</i>
+                <form>
+                <textarea name="message" rows="10" cols="30" placeholder="leaving a comment is optional" />
+                </form>
             </div>
         )
     }
