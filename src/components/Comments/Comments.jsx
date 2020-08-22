@@ -35,7 +35,7 @@ class Comments extends Component {
     }
 }
 
-//not using store prop
+//not using store props
 const mapStateToProps = (reduxStore) => {
     return {
         reduxStore
