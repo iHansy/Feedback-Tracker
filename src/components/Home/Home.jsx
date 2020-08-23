@@ -7,6 +7,10 @@ class Home extends Component {
     //     console.log('Starting feedback...');
     // }
 
+    componentDidMount() {
+        console.log(this.props.reduxStore); //confirming data reset
+    }
+
     //function to go to feeling url
     handleStart = () => {
         console.log('starting feedback...');

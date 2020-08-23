@@ -10,8 +10,10 @@ import { Provider } from 'react-redux';
 //reducers below this
 //I could have combined most of these reducers into 1 bigger reducer, but I feel like this is good practice
 const feelingReducer = (state = {}, action) => {
-    if (action.type === 'SET_FEELING') { 
+    if (action.type === 'SET_FEELING') {
         return action.payload //this creates a new state
+    } else if (action.type === 'RESET') {
+        return action.payload
     }
     return state;
 }
@@ -19,12 +21,16 @@ const feelingReducer = (state = {}, action) => {
 const understandingReducer = (state = {}, action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload
+    } else if (action.type === 'RESET') {
+        return action.payload
     }
     return state
 }
 
 const supportedReducer = (state = {}, action) => {
-    if (action.type ==='SET_SUPPORTED') {
+    if (action.type === 'SET_SUPPORTED') {
+        return action.payload
+    } else if (action.type === 'RESET') {
         return action.payload
     }
     return state
@@ -32,6 +38,8 @@ const supportedReducer = (state = {}, action) => {
 
 const commentsReducer = (state = {}, action) => {
     if (action.type === 'SET_COMMENTS') {
+        return action.payload
+    } else if (action.type === 'RESET') {
         return action.payload
     }
     return state

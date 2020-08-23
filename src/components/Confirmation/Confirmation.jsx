@@ -3,12 +3,19 @@ import { connect } from 'react-redux';
 
 class Confirmation extends Component {
 
-
+    //is this function name too long?
+    confirmationHomeBtn = () => {
+        console.log('returning home...')
+        console.log(this.props.reduxStore);
+        this.props.history.push('/'); //changing url to home
+    }
 
     render() {
         return (
-            <h2>Thank you for submitting your daily feedback!</h2>
-            <button onClick>Return Home</button>
+            <div>
+                <h2>Thank you for submitting your daily feedback!</h2>
+                <button onClick={this.confirmationHomeBtn}>Return Home</button>
+            </div>
         )
     }
 }
