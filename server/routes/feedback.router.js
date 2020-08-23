@@ -12,7 +12,6 @@ router.post('/', (req, res) => {
     console.log(feedback);
     const values = [feedback.feeling, feedback.understanding, feedback.supported, feedback.comments]
     pool.query(queryText, values).then((result) => {
-            console.log(result);
             res.sendStatus(201); //created
         }).catch((error) => {
             console.log('error in POST', error);

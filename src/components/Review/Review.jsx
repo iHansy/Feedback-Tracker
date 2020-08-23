@@ -16,13 +16,15 @@ class Review extends Component {
 
     //happens on submit button click, send info to database and push history
     reviewSubmitBtn = () => {
-        console.log('submitting feedback')
+        console.log('submitting feedback to database...')
         axios.post('/api/feedback', this.state.feedback) //this.state.feedback is going to server
             .then((response) => {
                 //added feedback to database
             }).catch((error) => { //should get 500 back if error
                 console.log('error adding feedback to database', error);
             })
+        //once it's added to database, go to confirmation page
+        this.props.history.push('/confirmation');
     }
 
     render() {

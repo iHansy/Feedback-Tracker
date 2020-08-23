@@ -10,11 +10,9 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
+import Confirmation from '../Confirmation/Confirmation.jsx';
 
 class App extends Component {
-
-
-
 
   render() {
     return (
@@ -32,7 +30,7 @@ class App extends Component {
           <Route exact path="/supported" component={Supported} />
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
-          {/* <Route exact path="/confirmation" component={Confirmation} /> */}
+          <Route exact path="/confirmation" component={Confirmation} />
 
         </div>
       </Router>
