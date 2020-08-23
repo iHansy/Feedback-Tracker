@@ -41,3 +41,4 @@
 {} Use fancier alerts
 {} Move app.js imports to their own component? Not sure if this is even allowed
 {} Create 
+{} comments placeholder - just Optional. in italics

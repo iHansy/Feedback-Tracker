@@ -10,6 +10,11 @@ class Review extends Component {
         console.log(this.props.reduxStore)
     }
 
+    //happens on submit button click, send info to database and push history
+    reviewSubmitBtn = () => {
+        console.log('submitting feedback')
+    }
+
     render() {
 
         return (
@@ -17,19 +22,16 @@ class Review extends Component {
                 <h2>Review your feedback</h2>
                 {/* created separate component for table with review info */}
                 <ReviewCatagories /> 
+                <button onClick={this.reviewSubmitBtn}>Submit Feedback</button>
             </div>
         )
     }
 }
 
-//now let's use the store props!
+//not using store props here either
 const mapStoreToProps = (reduxStore) => {
     return {
-        reduxStore,
-        feeling: reduxStore.feelingReducer,
-        understanding: reduxStore.understandingReducer,
-        supported: reduxStore.supportedReducer,
-        comments: reduxStore.commentsReducer,
+        reduxStore
     }
 }
 

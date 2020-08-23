@@ -14,7 +14,7 @@ class ReviewCatagories extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Feeling</td>
+                            <td>Overall feeling</td>
                             <td>{this.props.feeling}</td>
                         </tr>
                         <tr>
