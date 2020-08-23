@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 
 class Feeling extends Component {
 
+    //checking store values
+    componentDidMount() {
+        console.log(this.props.reduxStore);
+    }
+
     state = { //initial state setup
         feeling: ''
     }

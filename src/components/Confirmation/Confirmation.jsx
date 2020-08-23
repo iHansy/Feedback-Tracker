@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 
 class Confirmation extends Component {
 
+    //checking store values
+    componentDidMount() {
+        console.log(this.props.reduxStore);
+        console.log(this.props.history); //very interesting to see this console log
+    }
+
     //is this function name too long?
     confirmationHomeBtn = () => {
         console.log('returning home...')

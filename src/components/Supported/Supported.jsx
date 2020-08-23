@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 
 class Supported extends Component {
 
+    //checking store values
+    componentDidMount() {
+        console.log(this.props.reduxStore);
+    }
+
     state = {
         supported: ''
     }
@@ -24,6 +29,11 @@ class Supported extends Component {
         this.props.history.push('/comments') //adding url
     }
 
+    supportedBackBtn = () => {
+        console.log('going back...');
+        this.props.history.goBack();
+    }
+
     render() {
         return (
             <div>
@@ -32,6 +42,7 @@ class Supported extends Component {
                 <p>5 = feeling very supported</p>
                 <input type="number" placeholder="enter number" onChange={this.supportedInput} />
                 <button onClick={this.supportedNextBtn}>Next</button>
+                <button onClick={this.supportedBackBtn}>Back</button>
             </div>
         )
     }

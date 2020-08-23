@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 
 class Comments extends Component {
 
+    //checking store values
+    componentDidMount() {
+        console.log(this.props.reduxStore);
+    }
+
     state = {
         comments: ''
     }
@@ -19,6 +24,11 @@ class Comments extends Component {
         this.props.history.push('/review')
     }
 
+    commentsBackBtn = () => {
+        console.log('going back...');
+        this.props.history.goBack();
+    }
+
     render() {
         return (
             <div>
@@ -30,6 +40,7 @@ class Comments extends Component {
                     onChange={this.commentsInput}
                 />
                 <button onClick={this.commentsNextBtn}>Next</button>
+                <button onClick={this.commentsBackBtn}>Back</button>
             </div>
         )
     }

@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 
 class Understanding extends Component {
 
+    //checking store values
+    componentDidMount() {
+        console.log(this.props.reduxStore);
+    }
+
     state = { //initial state
         understanding: ''
     }
@@ -25,6 +30,11 @@ class Understanding extends Component {
         this.props.history.push('/supported')
     }
 
+    understandingBackBtn = () => {
+        console.log('going back...');
+        this.props.history.goBack();
+    }
+
     render() {
         return (
             <div>
@@ -33,6 +43,7 @@ class Understanding extends Component {
                 <p>5 = understanding everything!</p>
                 <input type="number" placeholder="enter number" onChange={this.understandingInput} />
                 <button onClick={this.understandingNextBtn}>Next</button>
+                <button onClick={this.understandingBackBtn}>Back</button>
             </div>
         )
     }

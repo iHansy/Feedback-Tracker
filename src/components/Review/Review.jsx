@@ -5,6 +5,11 @@ import ReviewCatagories from './ReviewCatagories';
 
 class Review extends Component {
 
+    //checking store values
+    componentDidMount() {
+        console.log(this.props.reduxStore);
+    }
+
     state = {
         feedback: {
             feeling: this.props.feeling,
@@ -27,6 +32,11 @@ class Review extends Component {
         this.props.history.push('/confirmation');
     }
 
+    reviewBackBtn = () => {
+        console.log('going back...');
+        this.props.history.goBack();
+    }
+
     render() {
 
         return (
@@ -35,6 +45,7 @@ class Review extends Component {
                 {/* created separate component for table with review info */}
                 <ReviewCatagories /> 
                 <button onClick={this.reviewSubmitBtn}>Submit Feedback</button>
+                <button onClick={this.reviewBackBtn}>Back</button>
             </div>
         )
     }
@@ -42,6 +53,7 @@ class Review extends Component {
 
 const mapStoreToProps = (reduxStore) => {
     return {
+        reduxStore,
         feeling: reduxStore.feelingReducer,
         understanding: reduxStore.understandingReducer,
         supported: reduxStore.supportedReducer,
