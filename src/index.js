@@ -45,6 +45,13 @@ const commentsReducer = (state = {}, action) => {
     return state
 }
 
+const feedbackHistoryReducer = (state = [], action) => {
+    if (action.type === 'SET_FEEDBACK') {
+        return [...state, action.payload]
+    }
+    return state
+}
+
 //always need a store!
 const store = createStore(
     combineReducers({
@@ -52,6 +59,7 @@ const store = createStore(
         understandingReducer,
         supportedReducer,
         commentsReducer,
+        feedbackHistoryReducer,
     }),
     applyMiddleware(logger)
 )
