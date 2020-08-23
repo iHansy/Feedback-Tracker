@@ -19,6 +19,17 @@ router.post('/', (req, res) => {
         })
 })
 
+//getting feedback history from database
+router.get('/', (req,res) => {
+    console.log('GET /api/feedback');
+    pool.query(`SELECT * from "feedback" ORDER BY "date";`).then((result) => {
+        res.send(result.rows); //.rows is array or history of feedback from DB
+    }).catch((error) => {
+        console.log('Error GET /api/feedback', error);
+        res.sendStatus(500); //internal server error
+    })
+})
+
 
 //exporting router
 module.exports = router;

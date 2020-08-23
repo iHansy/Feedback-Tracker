@@ -10,7 +10,8 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
-import Confirmation from '../Confirmation/Confirmation.jsx';
+import Confirmation from '../Confirmation/Confirmation.jsx'
+import Admin from '../Admin/Admin.jsx';
 
 class App extends Component {
 
@@ -22,7 +23,6 @@ class App extends Component {
             <h1 className="App-title">Daily Feedback</h1>
           </header>
           <br />
-
           {/* Declaring route urls w/ components */}
           <Route exact path="/" component={Home} />
           <Route exact path="/feeling" component={Feeling} />
@@ -31,7 +31,7 @@ class App extends Component {
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
           <Route exact path="/confirmation" component={Confirmation} />
-
+          <Route exact path="/admin" component={Admin} />
         </div>
       </Router>
     );
