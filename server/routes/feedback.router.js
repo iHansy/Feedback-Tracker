@@ -8,9 +8,9 @@ router.post('/', (req, res) => {
         INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
         VALUES ($1, $2, $3, $4);
         ` //sql sanitizing from injection 
-    console.log(req.body); //this is an object coming from the client
-    const feedback = req.body;
-    const values = [feedback.feeling, feedback.understanding, feedback.support, feedback.comments]
+    let feedback = req.body; //this is an object coming from the client
+    console.log(feedback);
+    const values = [feedback.feeling, feedback.understanding, feedback.supported, feedback.comments]
     pool.query(queryText, values).then((result) => {
             console.log(result);
             res.sendStatus(201); //created
