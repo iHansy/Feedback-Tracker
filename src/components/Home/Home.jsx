@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import Button from '@material-ui/core/Button';
+
 class Home extends Component {
     //longhand function declaration doesn't work in react?
     // function handleStart() {
@@ -23,7 +26,9 @@ class Home extends Component {
             <div>
                 <h2> Take a few deep breathes before you begin.</h2>
                 <p>Once you're ready, please click below.</p>
-                <button onClick={this.handleStart}>Start Feedback</button>
+                <Button variant="contained" color="primary" onClick={this.handleStart}>
+                    Start Feedback
+                </Button>
             </div>
         )
     }
