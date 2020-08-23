@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card } from '@material-ui/core';
 
 class Home extends Component {
     //longhand function declaration doesn't work in react?
@@ -23,13 +23,17 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <h2> Take a few deep breathes before you begin.</h2>
-                <p>Once you're ready, please click below.</p>
-                <Button variant="contained" color="primary" onClick={this.homeStart}>
-                    Start Feedback
-                </Button>
-            </div>
+            <Card elevation={5} className="cardSpacing">
+                <div className="homeConfirmSpacing">
+                    <h2> Take a few deep breathes before you begin.</h2>
+                    <p>Once you're ready, please click below.</p>
+                    <div className="nextBtn">
+                        <Button variant="contained" color="primary" onClick={this.homeStart} size="small">
+                            Start Feedback
+                    </Button>
+                    </div>
+                </div>
+            </Card>
         )
     }
 }

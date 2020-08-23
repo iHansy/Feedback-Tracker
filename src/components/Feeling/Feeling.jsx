@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card, Input } from '@material-ui/core';
 
 class Feeling extends Component {
 
@@ -36,16 +36,19 @@ class Feeling extends Component {
 
     render() {
         return (
-            <div>
+            <Card elevation={5} className="cardSpacing">
                 <h2>How are you feeling today?</h2>
                 <p>1 = really struggling </p>
                 <p>5 = feeling amazing</p>
+
                 {/* <form></form> */}
-                <input type="number" required placeholder="enter number" onChange={this.feelingInput} />
-                <Button variant="contained" color="primary" onClick={this.feelingNextBtn}>
-                    Next
-                </Button>
-            </div>
+                <Input type="number" placeholder="enter number" onChange={this.feelingInput}/>
+                <div className="nextBtn">
+                    <Button variant="contained" color="primary" onClick={this.feelingNextBtn} size="small">
+                        Next
+                    </Button>
+                </div>
+            </Card>
         )
     }
 }

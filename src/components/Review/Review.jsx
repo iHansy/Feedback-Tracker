@@ -4,7 +4,7 @@ import axios from 'axios';
 import ReviewCatagories from './ReviewCatagories';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card } from '@material-ui/core';
 
 class Review extends Component {
 
@@ -43,17 +43,23 @@ class Review extends Component {
     render() {
 
         return (
-            <div>
+            <Card elevation={5} className="cardSpacing">
                 <h2>Review your feedback</h2>
                 {/* created separate component for table with review info */}
                 <ReviewCatagories /> 
-                <Button variant="contained" color="primary" onClick={this.reviewBackBtn}> 
-                    Back
-                </Button>
-                <Button variant="contained" color="primary" onClick={this.reviewSubmitBtn}> 
-                    Submit Feedback
-                </Button>
-            </div>
+                <div className="doubleBtns">
+                    <div className="doubleBackBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.reviewBackBtn}>
+                            Back
+                    </Button>
+                    </div>
+                    <div className="doubleNextBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.reviewSubmitBtn}>
+                            Submit
+                    </Button>
+                    </div>
+                </div>
+            </Card>
         )
     }
 }

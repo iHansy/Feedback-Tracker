@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card, TextField } from '@material-ui/core';
 
 class Comments extends Component {
 
@@ -34,21 +34,30 @@ class Comments extends Component {
 
     render() {
         return (
-            <div>
+            <Card elevation={5} className="cardSpacing">
                 <h2>Any comments you would like to add?</h2>
                 {/* cool thing I found! First time using the textarea element, super sweet. */}
-                <textarea
-                    name="message" rows="7" cols="35"
-                    placeholder="leaving a comment is optional"
+                <TextField
+                    id="standard-multiline-static"
+                    label="Optional"
+                    multiline
+                    variant="outlined"
+                    rows={5}
                     onChange={this.commentsInput}
                 />
-                <Button variant="contained" color="primary" onClick={this.commentsBackBtn}>
-                    Back
-                </Button>
-                <Button variant="contained" color="primary" onClick={this.commentsNextBtn}>
-                    Next
-                </Button>
-            </div>
+                <div className="doubleBtns">
+                    <div className="doubleBackBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.commentsBackBtn}>
+                            Back
+                    </Button>
+                    </div>
+                    <div className="doubleNextBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.commentsNextBtn}>
+                            Next
+                    </Button>
+                    </div>
+                </div>
+            </Card>
         )
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card } from '@material-ui/core';
 
 class Confirmation extends Component {
 
@@ -16,18 +16,22 @@ class Confirmation extends Component {
     confirmationHomeBtn = () => {
         console.log('returning home...')
         console.log(this.props.reduxStore);
-        this.props.dispatch({type: 'RESET', payload: {}}) //resetting all reducer values when returning home
+        this.props.dispatch({ type: 'RESET', payload: {} }) //resetting all reducer values when returning home
         this.props.history.push('/'); //changing url to home
     }
 
     render() {
         return (
-            <div>
-                <h2>Thank you for submitting your daily feedback!</h2>
-                <Button variant="contained" color="primary" onClick={this.confirmationHomeBtn}> 
-                    Return Home
-                </Button>
-            </div>
+            <Card elevation={5} className="cardSpacing">
+                <div className="homeConfirmSpacing">
+                    <h2>Thank you for submitting your daily feedback!</h2>
+                    <div className="nextBtn">
+                        <Button variant="contained" color="primary" onClick={this.confirmationHomeBtn} size="small">
+                            Return Home
+                    </Button>
+                    </div>
+                </div>
+            </Card>
         )
     }
 }

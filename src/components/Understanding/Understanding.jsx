@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card, Input } from '@material-ui/core';
 
 class Understanding extends Component {
 
@@ -40,18 +40,24 @@ class Understanding extends Component {
 
     render() {
         return (
-            <div>
+            <Card elevation={5} className="cardSpacing">
                 <h2>How well are you understanding the content?</h2>
                 <p>1 = not understanding it at all</p>
                 <p>5 = understanding everything!</p>
-                <input type="number" placeholder="enter number" onChange={this.understandingInput} />
-                <Button variant="contained" color="primary" onClick={this.understandingBackBtn}>
-                    Back
-                </Button>
-                <Button variant="contained" color="primary" onClick={this.understandingNextBtn}>
-                    Next
-                </Button>
-            </div>
+                <Input type="number" placeholder="enter number" onChange={this.understandingInput} />
+                <div className="doubleBtns">
+                    <div className="doubleBackBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.understandingBackBtn}>
+                            Back
+                    </Button>
+                    </div>
+                    <div className="doubleNextBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.understandingNextBtn}>
+                            Next
+                    </Button>
+                    </div>
+                </div>
+            </Card>
         )
     }
 }

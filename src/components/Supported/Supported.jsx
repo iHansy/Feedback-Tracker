@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Button, Paper } from '@material-ui/core';
+import { Button, Card, Input } from '@material-ui/core';
 
 class Supported extends Component {
 
@@ -39,18 +39,24 @@ class Supported extends Component {
 
     render() {
         return (
-            <div>
+            <Card elevation={5} className="cardSpacing">
                 <h2>How well are you feeling supported?</h2>
                 <p>1 = not feeling supported at all</p>
                 <p>5 = feeling very supported</p>
-                <input type="number" placeholder="enter number" onChange={this.supportedInput} />
-                <Button variant="contained" color="primary" onClick={this.supportedBackBtn}> 
-                    Back
-                </Button>
-                <Button variant="contained" color="primary" onClick={this.supportedNextBtn}> 
-                    Next
-                </Button>
-            </div>
+                <Input type="number" placeholder="enter number" onChange={this.supportedInput} />
+                <div className="doubleBtns">
+                    <div className="doubleBackBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.supportedBackBtn}>
+                            Back
+                    </Button>
+                    </div>
+                    <div className="doubleNextBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.supportedNextBtn}>
+                            Next
+                    </Button>
+                    </div>
+                </div>
+            </Card>
         )
     }
 }

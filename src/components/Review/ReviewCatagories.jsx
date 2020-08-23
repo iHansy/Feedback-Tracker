@@ -1,36 +1,33 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '@material-ui/core';
+
 class ReviewCatagories extends Component {
 
     render() {
         return (
-                <table className="tableStyle">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Your response</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Overall feeling</td>
-                            <td>{this.props.feeling}</td>
-                        </tr>
-                        <tr>
-                            <td>Understanding</td>
-                            <td>{this.props.understanding}</td>
-                        </tr>
-                        <tr>
-                            <td>Supported</td>
-                            <td>{this.props.supported}</td>
-                        </tr>
-                        <tr>
-                            <td>Comments</td>
-                            <td>{this.props.comments}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <Table className="tableStyle">
+                    <TableBody>
+                        <TableRow>
+                            <TableCell>Overall feeling</TableCell>
+                            <TableCell>{this.props.feeling}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Understanding</TableCell>
+                            <TableCell>{this.props.understanding}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Supported</TableCell>
+                            <TableCell>{this.props.supported}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Comments</TableCell>
+                            <TableCell>{this.props.comments}</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
         )
     }
 }
