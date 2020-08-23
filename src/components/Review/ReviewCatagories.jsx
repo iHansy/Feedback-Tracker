@@ -38,7 +38,6 @@ class ReviewCatagories extends Component {
 //now let's use the store props!
 const mapStoreToProps = (reduxStore) => {
     return {
-        reduxStore,
         feeling: reduxStore.feelingReducer,
         understanding: reduxStore.understandingReducer,
         supported: reduxStore.supportedReducer,

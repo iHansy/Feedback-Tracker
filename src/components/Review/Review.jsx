@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 import ReviewCatagories from './ReviewCatagories';
 
 class Review extends Component {
 
-    componentDidMount() {
-        //would have probably been more efficient to keep all reducers in 1 bigger one
-        //but this is good repetitive practice
-        console.log(this.props.reduxStore)
+    state = {
+        feedback: {
+            feeling: this.props.feeling,
+            understanding: this.props.understanding,
+            supported: this.props.supported,
+            comments: this.props.comments,
+        }
     }
 
     //happens on submit button click, send info to database and push history
     reviewSubmitBtn = () => {
         console.log('submitting feedback')
+        axios.post('/api/feedback', this.state.feedback) //this.state.feedback is going to server
+            .then((response) => {
+                //added feedback to database
+            }).catch((error) => { //should get 500 back if error
+                console.log('error adding feedback to database', error);
+            })
     }
 
     render() {
@@ -28,10 +38,12 @@ class Review extends Component {
     }
 }
 
-//not using store props here either
 const mapStoreToProps = (reduxStore) => {
     return {
-        reduxStore
+        feeling: reduxStore.feelingReducer,
+        understanding: reduxStore.understandingReducer,
+        supported: reduxStore.supportedReducer,
+        comments: reduxStore.commentsReducer,
     }
 }
 
