@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import { Button, Paper } from '@material-ui/core';
+
 class Confirmation extends Component {
 
     //checking store values
@@ -21,7 +24,9 @@ class Confirmation extends Component {
         return (
             <div>
                 <h2>Thank you for submitting your daily feedback!</h2>
-                <button onClick={this.confirmationHomeBtn}>Return Home</button>
+                <Button variant="contained" color="primary" onClick={this.confirmationHomeBtn}> 
+                    Return Home
+                </Button>
             </div>
         )
     }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import { Button, Paper } from '@material-ui/core';
+
 class Understanding extends Component {
 
     //checking store values
@@ -42,8 +45,12 @@ class Understanding extends Component {
                 <p>1 = not understanding it at all</p>
                 <p>5 = understanding everything!</p>
                 <input type="number" placeholder="enter number" onChange={this.understandingInput} />
-                <button onClick={this.understandingNextBtn}>Next</button>
-                <button onClick={this.understandingBackBtn}>Back</button>
+                <Button variant="contained" color="primary" onClick={this.understandingBackBtn}>
+                    Back
+                </Button>
+                <Button variant="contained" color="primary" onClick={this.understandingNextBtn}>
+                    Next
+                </Button>
             </div>
         )
     }

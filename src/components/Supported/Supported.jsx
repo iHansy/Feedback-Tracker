@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import { Button, Paper } from '@material-ui/core';
+
 class Supported extends Component {
 
     //checking store values
@@ -41,8 +44,12 @@ class Supported extends Component {
                 <p>1 = not feeling supported at all</p>
                 <p>5 = feeling very supported</p>
                 <input type="number" placeholder="enter number" onChange={this.supportedInput} />
-                <button onClick={this.supportedNextBtn}>Next</button>
-                <button onClick={this.supportedBackBtn}>Back</button>
+                <Button variant="contained" color="primary" onClick={this.supportedBackBtn}> 
+                    Back
+                </Button>
+                <Button variant="contained" color="primary" onClick={this.supportedNextBtn}> 
+                    Next
+                </Button>
             </div>
         )
     }

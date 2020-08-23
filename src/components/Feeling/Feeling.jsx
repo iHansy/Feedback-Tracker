@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import { Button, Paper } from '@material-ui/core';
+
 class Feeling extends Component {
 
     //checking store values
@@ -39,7 +42,9 @@ class Feeling extends Component {
                 <p>5 = feeling amazing</p>
                 {/* <form></form> */}
                 <input type="number" required placeholder="enter number" onChange={this.feelingInput} />
-                <button onClick={this.feelingNextBtn}>Next</button>
+                <Button variant="contained" color="primary" onClick={this.feelingNextBtn}>
+                    Next
+                </Button>
             </div>
         )
     }

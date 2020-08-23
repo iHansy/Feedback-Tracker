@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import ReviewCatagories from './ReviewCatagories';
 
+// Material-UI
+import { Button, Paper } from '@material-ui/core';
+
 class Review extends Component {
 
     //checking store values
@@ -44,8 +47,12 @@ class Review extends Component {
                 <h2>Review your feedback</h2>
                 {/* created separate component for table with review info */}
                 <ReviewCatagories /> 
-                <button onClick={this.reviewSubmitBtn}>Submit Feedback</button>
-                <button onClick={this.reviewBackBtn}>Back</button>
+                <Button variant="contained" color="primary" onClick={this.reviewBackBtn}> 
+                    Back
+                </Button>
+                <Button variant="contained" color="primary" onClick={this.reviewSubmitBtn}> 
+                    Submit Feedback
+                </Button>
             </div>
         )
     }

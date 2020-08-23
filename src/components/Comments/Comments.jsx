@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Material-UI
+import { Button, Paper } from '@material-ui/core';
+
 class Comments extends Component {
 
     //checking store values
@@ -20,7 +23,7 @@ class Comments extends Component {
 
     commentsNextBtn = () => {
         console.log(this.state);
-        this.props.dispatch({ type: 'SET_COMMENTS', payload: this.state.comments})
+        this.props.dispatch({ type: 'SET_COMMENTS', payload: this.state.comments })
         this.props.history.push('/review')
     }
 
@@ -39,8 +42,12 @@ class Comments extends Component {
                     placeholder="leaving a comment is optional"
                     onChange={this.commentsInput}
                 />
-                <button onClick={this.commentsNextBtn}>Next</button>
-                <button onClick={this.commentsBackBtn}>Back</button>
+                <Button variant="contained" color="primary" onClick={this.commentsBackBtn}>
+                    Back
+                </Button>
+                <Button variant="contained" color="primary" onClick={this.commentsNextBtn}>
+                    Next
+                </Button>
             </div>
         )
     }
