@@ -41,11 +41,27 @@
 }
 
 .tableStyle {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 25em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 25em;
 }
 
 .homeConfirmSpacing {
   margin-top: 5em;
+}
+
+.adminCardSpacing {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 50em;
+  min-height: 25em;
+  padding-top: 1.5em;
+}
+
+.adminTableStyle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  max-width: 45em;
 }

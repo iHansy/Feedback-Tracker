@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
 
 class ReviewCatagories extends Component {
 
@@ -19,7 +19,7 @@ class ReviewCatagories extends Component {
                             <TableCell>{this.props.understanding}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Supported</TableCell>
+                            <TableCell>Support</TableCell>
                             <TableCell>{this.props.supported}</TableCell>
                         </TableRow>
                         <TableRow>

@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import AdminFeedback from '../Admin/AdminFeedback.jsx';
 
 // Material-UI
-import { Button, Card } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Card } from '@material-ui/core';
 
 class Admin extends Component {
-
-    state = {
-        newElement: 'testing'
-      }
 
     componentDidMount() {
         console.log('admin page loaded...')
@@ -28,18 +25,12 @@ class Admin extends Component {
         })
     }
 
-
-
     render() {
         return (
-            <div>
-                <h1> ADMIN PAGE!</h1>
-                {this.props.reduxStore.feedbackHistoryReducer.map((feedback, index) => {
-                    return (
-                        <p>{feedback.feeling}</p>
-                    )
-                })}
-            </div>
+            <Card elevation={5} className="adminCardSpacing">
+                <h2>Feedback History</h2>
+                <AdminFeedback />
+            </Card>
         )
     }
 }
