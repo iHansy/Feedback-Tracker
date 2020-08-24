@@ -34,6 +34,11 @@ class Feeling extends Component {
         this.props.history.push('/understanding') //navigating to understanding page
     }
 
+    feelingBackBtn = () => {
+        console.log('going back...');
+        this.props.history.goBack();
+    }
+
     render() {
         return (
             <Card elevation={5} className="cardSpacing">
@@ -43,10 +48,17 @@ class Feeling extends Component {
 
                 {/* <form></form> */}
                 <Input type="number" placeholder="enter number" onChange={this.feelingInput}/>
-                <div className="nextBtn">
-                    <Button variant="contained" color="primary" onClick={this.feelingNextBtn} size="small">
-                        Next
+                <div className="doubleBtns">
+                    <div className="doubleBackBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.feelingBackBtn}>
+                            Back
                     </Button>
+                    </div>
+                    <div className="doubleNextBtn">
+                        <Button variant="contained" color="primary" size="small" onClick={this.feelingNextBtn}>
+                            Next
+                    </Button>
+                    </div>
                 </div>
             </Card>
         )
