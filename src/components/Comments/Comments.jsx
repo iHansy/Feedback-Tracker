@@ -39,7 +39,7 @@ class Comments extends Component {
                 {/* cool thing I found! First time using the textarea element, super sweet. */}
                 <TextField
                     id="standard-multiline-static"
-                    label="Optional"
+                    label="optional"
                     multiline
                     variant="outlined"
                     rows={5}

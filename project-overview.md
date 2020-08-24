@@ -4,30 +4,30 @@
 {X} Create reducers for each input
 {X} Create base views
     {X} Home page
-        {} Add margins
-        {} Increase button
+        {X} Add margins
+        {X} Increase button
     {X} How are you feeling?
     {X} Understanding content?
     {X} Being supported?
     {X} Any comments?
-    {} Review/submit
+    {X} Review/submit
         - save submission in database
-    {} confirmation
+    {X} confirmation
         - text saying thanks for submitting your feedback
         - button going home
         - button to leave another feedback
 
 {X} Create Components where deemed valuable
 {X} Create alerts if input fields are empty (not including comments)
-{} Reset feedback data when the submit button is hit
+{X} Reset feedback data when the submit button is hit
     - also send info to database
 {} Create project name/description in README
     - Include picture
     - Include instructions to start up, install node and npm install all dependencies
 {} Add favicon
-{} Add footer?
-{} Make sure font and font sizes are consistent
-{} Change buttons
+{X Add footer?
+{X} Make sure font and font sizes are consistent
+{X} Change buttons
 
 
 

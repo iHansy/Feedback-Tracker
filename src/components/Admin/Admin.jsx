@@ -11,7 +11,7 @@ class Admin extends Component {
     componentDidMount() {
         console.log('admin page loaded...')
         this.adminGetFeedback();
-        console.log(this.state);
+        console.log(this.props.reduxStore);
     }
 
     // getting feedback history from database
@@ -29,7 +29,7 @@ class Admin extends Component {
         return (
             <Card elevation={5} className="adminCardSpacing">
                 <h2>Feedback History</h2>
-                <AdminTable />
+                <AdminTable adminGetFeedback={this.adminGetFeedback}/>
             </Card>
         )
     }
