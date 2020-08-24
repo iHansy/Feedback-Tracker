@@ -30,6 +30,19 @@ router.get('/', (req,res) => {
     })
 })
 
+//deleting selected row from database
+router.delete('/:id', (req, res) => {
+    let id = req.params.id; //id of the thing to delete comes through params
+    console.log('deleting feedback id of:', id);
+    let queryText = `DELETE FROM "feedback" WHERE "id" = $1;`; //injection sanitization
+    pool.query(queryText, [id]).then((result) => {
+        res.sendStatus(202); //Accepted
+    }).catch((error) => {
+        console.log('error in DELETE', error);
+        res.sendStatus(500); //internal server error
+    })
+})
+
 
 //exporting router
 module.exports = router;
