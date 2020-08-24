@@ -1,8 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import axios from 'axios';
-import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, } from 'react-router-dom';
 // importing feedback components
 import Home from '../Home/Home.jsx';
 import Feeling from '../Feeling/Feeling.jsx';

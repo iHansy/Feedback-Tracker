@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import AdminFeedback from '../Admin/AdminFeedback.jsx';
+import AdminTable from './AdminTable.jsx';
 
 // Material-UI
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Card, } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 
 class Admin extends Component {
 
@@ -29,7 +29,7 @@ class Admin extends Component {
         return (
             <Card elevation={5} className="adminCardSpacing">
                 <h2>Feedback History</h2>
-                <AdminFeedback />
+                <AdminTable />
             </Card>
         )
     }

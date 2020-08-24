@@ -4,7 +4,11 @@ import { connect } from 'react-redux';
 // Material-UI
 import { Table, TableBody, TableCell, TableHead, TableRow, Button } from '@material-ui/core';
 
-class AdminList extends Component {
+class AdminTable extends Component {
+
+    adminDeleteBtn = () => {
+        console.log('deleting from database...');
+    }
 
     render() {
         return (
@@ -22,14 +26,15 @@ class AdminList extends Component {
                 <TableBody>
                     {this.props.reduxStore.feedbackHistoryReducer.map((feedback, index) => {
                         return (
-                            <TableRow>
+                            <TableRow key={feedback.id}>
                                 <TableCell>{feedback.id}</TableCell>
                                 <TableCell>{feedback.feeling}</TableCell>
                                 <TableCell>{feedback.understanding}</TableCell>
                                 <TableCell>{feedback.support}</TableCell>
                                 <TableCell>{feedback.comments}</TableCell>
                                 <TableCell>
-                                    <Button size="small" variant="contained" color="secondary">Delete</Button>
+                                    <Button size="small" variant="contained" 
+                                    color="secondary" onClick={this.adminDeleteBtn}>Delete</Button>
                                 </TableCell>
                             </TableRow>
                         )
@@ -46,4 +51,4 @@ const mapStateToProps = (reduxStore) => {
     }
 }
 
-export default connect(mapStateToProps)(AdminList);
+export default connect(mapStateToProps)(AdminTable);

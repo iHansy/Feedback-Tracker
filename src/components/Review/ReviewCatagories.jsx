@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Material-UI
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableRow } from '@material-ui/core';
 
 class ReviewCatagories extends Component {
 
