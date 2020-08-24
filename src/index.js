@@ -47,7 +47,7 @@ const commentsReducer = (state = {}, action) => {
 
 const feedbackHistoryReducer = (state = [], action) => {
     if (action.type === 'SET_FEEDBACK') {
-        return [...state, action.payload]
+        return action.payload
     }
     return state
 }

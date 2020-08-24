@@ -7,9 +7,14 @@ import { Button, Card } from '@material-ui/core';
 
 class Admin extends Component {
 
+    state = {
+        newElement: 'testing'
+      }
+
     componentDidMount() {
         console.log('admin page loaded...')
         this.adminGetFeedback();
+        console.log(this.state);
     }
 
     // getting feedback history from database
@@ -29,11 +34,11 @@ class Admin extends Component {
         return (
             <div>
                 <h1> ADMIN PAGE!</h1>
-                {/* {this.props.reduxStore.feedbackHistoryReducer.map((feedback, index) => {
+                {this.props.reduxStore.feedbackHistoryReducer.map((feedback, index) => {
                     return (
-                        <p>{feedback}</p>
+                        <p>{feedback.feeling}</p>
                     )
-                })} */}
+                })}
             </div>
         )
     }
