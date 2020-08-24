@@ -20,7 +20,6 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">Daily Feedback</h1>
           </header>
-          <br />
           {/* Declaring route urls w/ components */}
           <Route exact path="/" component={Home} />
           <Route exact path="/feeling" component={Feeling} />

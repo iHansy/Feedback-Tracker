@@ -23,17 +23,17 @@ class Home extends Component {
 
     render() {
         return (
-            <Card elevation={5} className="cardSpacing">
-                <div className="homeConfirmSpacing">
-                    <h2> Take a few deep breathes before you begin.</h2>
-                    <p>Once you're ready, please click below.</p>
-                    <div className="startHomeBtn">
-                        <Button variant="contained" color="primary" onClick={this.homeStart} size="small">
-                            Start Feedback
+                <Card elevation={5} className="cardSpacing">
+                    <div className="homeConfirmSpacing">
+                        <h2> Take a few deep breathes before you begin.</h2>
+                        <p>Once you're ready, please click below.</p>
+                        <div className="startHomeBtn">
+                            <Button variant="contained" color="primary" onClick={this.homeStart} size="small">
+                                Start Feedback
                     </Button>
+                        </div>
                     </div>
-                </div>
-            </Card>
+                </Card>
         )
     }
 }
