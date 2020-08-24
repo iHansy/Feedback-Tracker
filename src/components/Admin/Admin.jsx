@@ -4,7 +4,7 @@ import axios from 'axios';
 import AdminFeedback from '../Admin/AdminFeedback.jsx';
 
 // Material-UI
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Card } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Card, } from '@material-ui/core';
 
 class Admin extends Component {
 
