@@ -8,17 +8,22 @@ At my school we had a problem with how we submitted our daily feedback, it was v
 
 I offered to build my professor a website and he was very excited! I built a multi-page web application that allows a student to navigate views and answer multiple feedback questions, including adding a comment. Towards the end of the application the student is able to review his response, go back and edit if needed, and finally submit. Once the student submits his response it gets sent to a back end database that stores their response along with all others. Now the professor has access to view all responses in his own secret url which ends with '/admin'. The professor is also able to delete responses if need be.
 
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
+<!-- To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com) -->
 
-## Screen Shot
+## Screen Shots
+
+This is the review page where a student can go back and edit or submit their submission.
 
 ![review](images/review-img.png)
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+This is the secret admin page where an administrator or professor can view all submissions and delete any if needed.
+
+![admin](images/admin-img.png)
+
 
 ### Prerequisites
 
-Link to software that is required to install the app (e.g. node).
+If you plan to clone and run this application, first install Node.js:
 
 - [Node.js](https://nodejs.org/en/)
 - List other prerequisites here
