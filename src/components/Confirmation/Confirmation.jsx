@@ -25,7 +25,7 @@ class Confirmation extends Component {
             <Card elevation={5} className="cardSpacing">
                 <div className="homeConfirmSpacing">
                     <h2>Thank you for submitting your daily feedback!</h2>
-                    <div className="returnHomeBtn">
+                    <div className="startHomeBtn">
                         <Button variant="contained" color="primary" onClick={this.confirmationHomeBtn} size="small">
                             Return Home
                     </Button>

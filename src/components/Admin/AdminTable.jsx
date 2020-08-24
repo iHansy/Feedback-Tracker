@@ -27,7 +27,7 @@ class AdminTable extends Component {
                             <TableCell align="center">Understanding</TableCell>
                             <TableCell align="center">Support</TableCell>
                             <TableCell align="center">Comments</TableCell>
-                            <TableCell align="center">Remove</TableCell>
+                            <TableCell align="center">Delete</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -41,7 +41,7 @@ class AdminTable extends Component {
                                     <TableCell>{feedback.comments}</TableCell>
                                     <TableCell>
                                         <Button size="small" variant="contained"
-                                            color="secondary" onClick={() => this.adminDeleteBtn(feedback.id)}>Delete</Button>
+                                            color="secondary" onClick={() => this.adminDeleteBtn(feedback.id)}>X</Button>
                                     </TableCell>
                                 </TableRow>
                             )

@@ -27,7 +27,7 @@ class Home extends Component {
                 <div className="homeConfirmSpacing">
                     <h2> Take a few deep breathes before you begin.</h2>
                     <p>Once you're ready, please click below.</p>
-                    <div className="nextBtn">
+                    <div className="startHomeBtn">
                         <Button variant="contained" color="primary" onClick={this.homeStart} size="small">
                             Start Feedback
                     </Button>
