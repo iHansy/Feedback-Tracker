@@ -8,7 +8,7 @@ class ReviewCatagories extends Component {
 
     render() {
         return (
-                <Table className="tableStyle">
+                <Table className="tableStyle" size="small">
                     <TableBody>
                         <TableRow>
                             <TableCell>Overall feeling</TableCell>

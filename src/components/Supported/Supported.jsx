@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import swal from 'sweetalert';
 
 // Material-UI
 import { Button, Card, Input } from '@material-ui/core';
@@ -25,7 +26,7 @@ class Supported extends Component {
         console.log(this.state);
         const supportedScore = this.state.supported
         if (supportedScore === '' || supportedScore < 1 || supportedScore > 5) {
-            alert('Please fill in a number 1-5.')
+            swal("Error", "Please enter in a number 1-5");
             return
         }
         this.props.dispatch({ type: 'SET_SUPPORTED', payload: this.state.supported}) //dispatch to redux

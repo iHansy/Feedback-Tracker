@@ -24,7 +24,7 @@ const understandingReducer = (state = {}, action) => {
     } else if (action.type === 'RESET') {
         return action.payload
     }
-    return state
+    return state;
 }
 
 const supportedReducer = (state = {}, action) => {
@@ -33,7 +33,7 @@ const supportedReducer = (state = {}, action) => {
     } else if (action.type === 'RESET') {
         return action.payload
     }
-    return state
+    return state;
 }
 
 const commentsReducer = (state = {}, action) => {
@@ -42,14 +42,14 @@ const commentsReducer = (state = {}, action) => {
     } else if (action.type === 'RESET') {
         return action.payload
     }
-    return state
+    return state;
 }
 
 const feedbackHistoryReducer = (state = [], action) => {
     if (action.type === 'SET_FEEDBACK') {
         return action.payload
     }
-    return state
+    return state;
 }
 
 //always need a store!

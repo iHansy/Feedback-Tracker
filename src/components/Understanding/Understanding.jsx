@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import swal from 'sweetalert';
 
 // Material-UI
 import { Button, Card, Input } from '@material-ui/core';
@@ -26,7 +27,7 @@ class Understanding extends Component {
         console.log(this.state);
         const understandingScore = this.state.understanding
         if (understandingScore === '' || understandingScore < 1 || understandingScore > 5) {
-            alert('Please fill in a number 1-5.')
+            swal("Error", "Please enter in a number 1-5");
             return
         }
         this.props.dispatch({ type: 'SET_UNDERSTANDING', payload: this.state.understanding })
@@ -43,7 +44,7 @@ class Understanding extends Component {
             <Card elevation={5} className="cardSpacing">
                 <h2>How well are you understanding the content?</h2>
                 <p>1 = not understanding it at all</p>
-                <p>5 = understanding everything!</p>
+                <p>5 = understanding everything</p>
                 <Input type="number" placeholder="enter number" onChange={this.understandingInput} />
                 <div className="doubleBtns">
                     <div className="doubleBackBtn">

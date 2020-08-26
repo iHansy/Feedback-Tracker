@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import swal from 'sweetalert';
 
 // Material-UI
 import { Button, Card, Input } from '@material-ui/core';
 
 class Feeling extends Component {
-
     //checking store values
     componentDidMount() {
         console.log(this.props.reduxStore);
@@ -27,7 +27,7 @@ class Feeling extends Component {
         console.log(this.state);
         const feelingScore = this.state.feeling
         if (feelingScore === '' || feelingScore < 1 || feelingScore > 5) {
-            alert('Please fill in a number 1-5.')
+            swal("Error", "Please enter in a number 1-5");
             return
         }
         this.props.dispatch({ type: 'SET_FEELING', payload: this.state.feeling }) //dispatching to redux reducer
@@ -43,10 +43,8 @@ class Feeling extends Component {
         return (
             <Card elevation={5} className="cardSpacing">
                 <h2>How are you feeling today?</h2>
-                <p>1 = really struggling </p>
+                <p>1 = feeling horrible</p>
                 <p>5 = feeling amazing</p>
-
-                {/* <form></form> */}
                 <Input type="number" placeholder="enter number" onChange={this.feelingInput}/>
                 <div className="doubleBtns">
                     <div className="doubleBackBtn">

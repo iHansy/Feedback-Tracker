@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 // Material-UI
 import { Table, TableBody, TableCell, TableHead, TableRow, Button } from '@material-ui/core';
@@ -15,6 +16,7 @@ class AdminTable extends Component {
             //reload feedback history
             this.props.adminGetFeedback();
         })
+        swal(`Success`, `Feedback for student id ${id} was deleted`);
     }
 
     render() {
