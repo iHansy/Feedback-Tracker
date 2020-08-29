@@ -7,7 +7,7 @@ At my school we had a problem with how we submitted our daily feedback, it was v
 
 I offered to build my professor a website and he was very excited! I built a multi-page web application that allows a student to navigate views and answer multiple feedback questions, including adding a comment. Towards the end of the application the student is able to review their response, go back and edit, and submit when finished. Once the student submits their response it gets sent to a back end database that stores their response along with all others. Now the professor has access to view all responses in his own secret url which ends with '/admin'. The professor is also able to delete responses if need be.
 
-To see the fully functional site, please visit: <a href="https://feedback-ihansy.herokuapp.com/#/" target="_blank">Deployed App</a>
+To see the fully functional site, please visit: <a target="_blank" href="https://feedback-ihansy.herokuapp.com/#/">Deployed App</a>
 
 <a href="http://example.com/" target="_blank">Hello, world!</a>
 
