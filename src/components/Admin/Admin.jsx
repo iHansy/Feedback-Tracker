@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import AdminTable from './AdminTable.jsx';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 // Material-UI
 import { Card } from '@material-ui/core';
@@ -28,6 +29,9 @@ class Admin extends Component {
     render() {
         return (
             <Card elevation={5} className="adminCardSpacing">
+                <nav>
+                    <Link to='/'><i><u>Home</u></i></Link>
+                </nav>
                 <h2>Feedback History</h2>
                 <AdminTable adminGetFeedback={this.adminGetFeedback}/>
             </Card>
