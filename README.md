@@ -37,7 +37,7 @@ If you plan to clone and run this application, first install Node.js:
 
 ## Usage
 
-1. Starting on home page, click 'Start Feedback'.
+1. Starting on the home page, click 'Start Feedback'.
 2. Continue with the questions and hit next when filled in.
 3. Feel free to add a comment, but this is optional.
 4. On the review page you can go back and edit your responses or click 'Submit'.
