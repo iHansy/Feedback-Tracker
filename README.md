@@ -5,19 +5,19 @@ _Duration: 18 hours_
 
 At my school we had a problem with how we submitted our daily feedback, it was very inefficient. The process was very manual and consisted of all of us writing out on paper how we are doing. We answered a series of questions then left our paper on the professors desk which created a huge mess. The professor had a hard time keeping track of all the feedback submissions and wanted a digital way to submit and store everything.
 
-I offered to build my professor a website and he was very excited! I built a multi-page web application that allows a student to navigate views and answer multiple feedback questions, including adding a comment. Towards the end of the application the student is able to review their response, go back and edit, and submit when finished. Once the student submits their response it gets sent to a back end database that stores their response along with all others. Now the professor has access to view all responses in his own secret url which ends with '/admin'. The professor is also able to delete responses if need be.
+I offered to build my professor a website and he was very excited! I built a multi-page web application that allows a student to navigate views and answer multiple feedback questions, including adding a comment. Towards the end of the application the student is able to review their response, go back and edit, and submit when finished. Once the student submits their response it gets sent to a back end database that stores their response along with all others. Now the professor has access to view all responses by clicking "Admin View" on the home page. The professor is also able to delete responses if need be.
 
 To see the fully functional site, please visit: <a target="_blank" href="https://feedback-ihansy.herokuapp.com/#/">Deployed App</a>
 
 ## Screen Shots
 
-This is the review page where a student can go back and edit or submit their submission.
+This is the home page where a student will start their feedback. The professor can click "Admin View" to view all responses.
 
-![review](images/review-img.png)
+![home](images/feedback-tracker-home.png)
 
-This is the secret admin page where an administrator or professor can view all submissions and delete any if needed.
+This is the admin page where the professor can view all submissions and delete any if needed.
 
-![admin](images/admin-img.png)
+![admin](images/feedback-tracker-admin.png)
 
 
 ### Prerequisites
@@ -41,7 +41,7 @@ If you plan to clone and run this application, first install Node.js:
 2. Continue with the questions and hit next when filled in.
 3. Feel free to add a comment, but this is optional.
 4. On the review page you can go back and edit your responses or click 'Submit'.
-5. Find the feedback history by adding '/admin' to the end of the url. Ie: 'http://localhost:3000/#/admin'.
+5. Find the feedback history by clicking 'Admin View' on the home page.
 
 ## Technologies used
 
