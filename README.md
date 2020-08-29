@@ -9,10 +9,6 @@ I offered to build my professor a website and he was very excited! I built a mul
 
 To see the fully functional site, please visit: <a target="_blank" href="https://feedback-ihansy.herokuapp.com/#/">Deployed App</a>
 
-<a onclick="window.open(this.href,'_blank');return false;" href="https://feedback-ihansy.herokuapp.com/#/">Some Other Site</a>
-
-<a href="http://example.com/" target="_blank">Hello, world!</a>
-
 ## Screen Shots
 
 This is the review page where a student can go back and edit or submit their submission.
