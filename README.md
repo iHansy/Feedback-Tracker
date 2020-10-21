@@ -13,7 +13,7 @@ To see the fully functional site, please visit: <a target="_blank" href="https:/
 
 This is the home page where a student will start their feedback. The professor can click "Admin View" to view all responses.
 
-![home](pulic/images/feedback-tracker-home.png)
+![home](images/feedback-tracker-home.png)
 
 This is the admin page where the professor can view all submissions and delete any if needed.
 
