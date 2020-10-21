@@ -56,7 +56,7 @@ Prime stack -
 - PostgreSQL
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. Also huge thanks to my cohort Rabin and my family!
+Thanks to [Prime Digital Academy](https://www.primeacademy.io) who equipped and helped me to make this application a reality. Also huge thanks to my cohort Rabin and my family!
 
 ## Support
 If you have suggestions or issues, please email me at Hansolo6283@gmail.com
