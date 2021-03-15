@@ -7,7 +7,7 @@ At my school we had a problem with how we submitted our daily feedback, it was v
 
 I offered to build my professor a website and he was very excited! I built a multi-page web application that allows a student to navigate views and answer multiple feedback questions, including adding a comment. Towards the end of the application the student is able to review their response, go back and edit, and submit when finished. Once the student submits their response it gets sent to a back end database that stores their response along with all others. Now the professor has access to view all responses by clicking "Admin View" on the home page. The professor is also able to delete responses if need be.
 
-To see the fully functional site, please visit: <a target="_blank" href="https://feedback-ihansy.herokuapp.com/#/">Deployed App</a>
+Check out the live application here - https://feedback-ihansy.herokuapp.com
 
 ## Screen Shots
 
@@ -56,7 +56,7 @@ Prime stack -
 - PostgreSQL
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. Also huge thanks to my cohort Rabin and my family!
+Thanks to [Prime Digital Academy](https://www.primeacademy.io) who equipped and helped me to make this application a reality. Also huge thanks to my cohort Rabin and my family!
 
 ## Support
 If you have suggestions or issues, please email me at Hansolo6283@gmail.com
